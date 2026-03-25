@@ -13,6 +13,7 @@
 # limitations under the License.
 
 FROM --platform=$BUILDPLATFORM node:20.20.0-alpine@sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8 AS builder
+ENV GOOGLE_CLOUD_PROFILER_DISABLE=1
 
 # Some packages (e.g. @google-cloud/profiler) require additional
 # deps for post-install scripts
